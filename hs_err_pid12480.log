@@ -1,0 +1,81 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006ea543b5, pid=12480, tid=13960
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_51-b13) (build 1.7.0_51-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.51-b03 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0x943b5]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000240d000):  JavaThread "main" [_thread_in_vm, id=13960, stack(0x00000000026b0000,0x00000000027b0000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x000000068000000c
+
+Registers:
+RAX=0x000000077ffffffe, RBX=0x0000000000000066, RCX=0x00000000027ae340, RDX=0xffffffff0000000e
+RSP=0x00000000027ae318, RBP=0x00000000027ae350, RSI=0x0000000000000020, RDI=0x0000000000000000
+R8 =0x000000007ffffffe, R9 =0x000000007ffffffe, R10=0x0000000000000066, R11=0x000000077ffffffe
+R12=0x000000000240d7a0, R13=0x0000000000000014, R14=0x00000007801adad0, R15=0x000000000240db28
+RIP=0x000000006ea543b5, EFLAGS=0x0000000000010292
+
+Top of Stack: (sp=0x00000000027ae318)
+0x00000000027ae318:   000000006eac9b54 0000000780003e3e
+0x00000000027ae328:   000000006ea8719b 000000000240db28
+0x00000000027ae338:   000000000240d750 000000077ffffffe
+0x00000000027ae348:   00000000000000aa 000000000240d750
+0x00000000027ae358:   00000000027ae400 000000000240d740
+0x00000000027ae368:   000000000240d7a0 000000000240c360
+0x00000000027ae378:   00000007801adc18 00000007801adad0
+0x00000000027ae388:   000000006eac934c 00000007801adad0
+0x00000000027ae398:   0000000000000000 00000000027ae400
+0x00000000027ae3a8:   0000000013000000 00000000000035e0
+0x00000000027ae3b8:   0000000000000005 0000000000000004
+0x00000000027ae3c8:   000000000240d740 0000000000003670
+0x00000000027ae3d8:   000000006eac95a3 00000000000003d8
+0x00000000027ae3e8:   00000007801adad0 000000000240c360
+0x00000000027ae3f8:   0000000000000118 000000000240db48
+0x00000000027ae408:   000000c400000066 000000aa00000e23 
+
+Instructions: (pc=0x000000006ea543b5)
+0x000000006ea54395:   cc cc cc cc cc cc cc cc cc cc cc 4c 63 01 41 8d
+0x000000006ea543a5:   44 90 10 48 63 d0 48 8b 01 48 83 e2 fc 49 2b d0
+0x000000006ea543b5:   8b 0c 02 0f b6 c1 89 4c 24 10 0f b6 4c 24 11 c1
+0x000000006ea543c5:   e0 08 0b c1 0f b6 4c 24 12 c1 e0 08 0b c1 0f b6 
+
+
+Register to memory mapping:
+
+RAX=0x000000077ffffffe is pointing into object: 0x000000077fffff58
+{constMethod} 
+ - klass: {other class}
+ - constants:       0x000000077fffa438 constant pool [973] for 'org/springframework/asm/ClassReader' cache=0x0000000780004c20
+ - stackmap data:       [B
+bci_from(000000077FFFFFFE) = 102; print_codes():
+RBX=0x0000000000000066 is an unknown value
+RCX=0x00000000027ae340 is pointing into the stack for thread: 0x000000000240d000
+RDX=0xffffffff0000000e is an unknown value
+RSP=0x00000000027ae318 is pointing into the stack for thread: 0x000000000240d000
+RBP=0x00000000027ae350 is pointing into the stack for thread: 0x000000000240d000
+RSI=0x0000000000000020 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x000000007ffffffe is an unknown value
+R9 =0x000000007ffffffe is an unknown value
+R10=0x0000000000000066 is an unknown value
+R11=0x000000077ffffffe is pointing into object: 0x000000077fffff58
+{constMethod} 
+ - klass: {other class}
+ - constants:       0x000000077fffa438 constant pool [973] for 'org/springframework/asm/ClassReader' cache=0x0000000780004c20
+ - stackmap data:       [B
+bci_from(000000077FFFFFFE) = 102; print_codes():
+R12=0x000000000240d7a0 is an unknown value
+R13=0x0000000000000014 is an unknown value
+R14=
